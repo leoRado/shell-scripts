@@ -24,7 +24,7 @@ $APT update
 echo "Should JDK-8 be installed? (Type Y or N)"
 read userSAnswer
 echo $userSAnswer | tr '[:upper:]' '[:lower:]'
-if [ $userSAnswer == "y"]
+if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	add-apt-repository ppa:webupd8team/java
 	$APT update
@@ -44,7 +44,7 @@ fi
 echo "Should MySql be installed? (Type Y or N)"
 read userSAnswer
 echo $userSAnswer | tr '[:upper:]' '[:lower:]'
-if [ $userSAnswer == "y"]
+if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	$APT install mysql-server
 fi
@@ -53,7 +53,7 @@ fi
 echo "Should Apache2 be installed? (Type Y or N)"
 read userSAnswer
 echo $userSAnswer | tr '[:upper:]' '[:lower:]'
-if [ $userSAnswer == "y"]
+if [ $userSAnswer == "y"] || [ $userSAnswer == "Y" ]
 then
 	if [ $(which apache2) ]
 	then
@@ -67,7 +67,7 @@ fi
 echo "Should Git be installed? (Type Y or N)"
 read userSAnswer
 echo $userSAnswer | tr '[:upper:]' '[:lower:]'
-if [ $userSAnswer == "y"]
+if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	$APT install git
 
@@ -80,12 +80,11 @@ then
 	git config --global user.name $gitEmail
 fi
 
-
 # VCode
 echo "Should Visual Code be installed? (Type Y or N)"
 read userSAnswer
 echo $userSAnswer | tr '[:upper:]' '[:lower:]'
-if [ $userSAnswer == "y"]
+if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	sudo add-apt-repository -y "deb https://packages.microsoft.com/repos/vscode stable main"
 	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB3E94ADBE1229CF
@@ -97,7 +96,7 @@ fi
 echo "Should Sublime 3 be installed? (Type Y or N)"
 read userSAnswer
 echo $userSAnswer | tr '[:upper:]' '[:lower:]'
-if [ $userSAnswer == "y"]
+if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	sudo add-apt-repository ppa:webupd8team/sublime-text-3
 	sudo $APT update
@@ -108,7 +107,7 @@ fi
 echo "Should NodeJS and NPM be installed? (Type Y or N)"
 read userSAnswer
 echo $userSAnswer | tr '[:upper:]' '[:lower:]'
-if [ $userSAnswer == "y"]
+if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	$APT install nodejs
 	$APT install npm
