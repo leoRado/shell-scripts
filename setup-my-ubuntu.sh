@@ -23,7 +23,6 @@ $APT update
 # Java - JDK8
 echo "Should JDK-8 be installed? (Type Y or N)"
 read userSAnswer
-echo $userSAnswer | tr '[:upper:]' '[:lower:]'
 if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	add-apt-repository ppa:webupd8team/java
@@ -43,7 +42,6 @@ fi
 # MySql
 echo "Should MySql be installed? (Type Y or N)"
 read userSAnswer
-echo $userSAnswer | tr '[:upper:]' '[:lower:]'
 if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	$APT install mysql-server
@@ -52,7 +50,6 @@ fi
 # Apache
 echo "Should Apache2 be installed? (Type Y or N)"
 read userSAnswer
-echo $userSAnswer | tr '[:upper:]' '[:lower:]'
 if [ $userSAnswer == "y"] || [ $userSAnswer == "Y" ]
 then
 	if [ $(which apache2) ]
@@ -66,7 +63,6 @@ fi
 # Git
 echo "Should Git be installed? (Type Y or N)"
 read userSAnswer
-echo $userSAnswer | tr '[:upper:]' '[:lower:]'
 if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	$APT install git
@@ -83,7 +79,6 @@ fi
 # VCode
 echo "Should Visual Code be installed? (Type Y or N)"
 read userSAnswer
-echo $userSAnswer | tr '[:upper:]' '[:lower:]'
 if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	sudo add-apt-repository -y "deb https://packages.microsoft.com/repos/vscode stable main"
@@ -95,7 +90,6 @@ fi
 # Sublime
 echo "Should Sublime 3 be installed? (Type Y or N)"
 read userSAnswer
-echo $userSAnswer | tr '[:upper:]' '[:lower:]'
 if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	sudo add-apt-repository ppa:webupd8team/sublime-text-3
@@ -106,7 +100,6 @@ fi
 # NodeJS and NPM
 echo "Should NodeJS and NPM be installed? (Type Y or N)"
 read userSAnswer
-echo $userSAnswer | tr '[:upper:]' '[:lower:]'
 if [ $userSAnswer == "y" ] || [ $userSAnswer == "Y" ]
 then
 	$APT install nodejs
